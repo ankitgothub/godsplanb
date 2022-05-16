@@ -1,0 +1,383 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ankit kadam</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather&family=Montserrat&family=Sacramento&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="t"> 
+        <img id="cloud1" src="images/cloud.png" alt="cloud-img">
+        <img id="bird" src="images/birds.png" alt="bird-img">
+        
+        <h1>jugad by AK</h1>
+        <h4> a <span class="pro">CSE Student</span> </h4>
+        
+        
+        <img id="cloud2" src="images/cloud.png" alt="cloud-img">
+        <img src="images/mountain.png" alt="mountain-img">
+        
+    </div>
+
+      
+
+    <div class="middle-container">
+
+        <div class="profile">
+          <img id="profilepic" src="images/man.png" alt="profile-img">
+          <h2>Program-5:-Develop an elementry catboat for any suitable customer interaction application.</h2>
+          <p class="para"> def greet(bot_name, birth_year):<br>
+            print("Hello! My name is {0}.".format(bot_name))<br>
+            print("I was created in {0}.".format(birth_year))<br>
+           def remind_name():<br>
+            print('Please, remind me your name.')<br>
+            name = input()<br>
+            print("What a great name you have, {0}!".format(name))<br>
+           def guess_age():<br>
+            print('Let me guess your age.')<br>
+            print('Enter remainders of dividing your age by 3, 5 and 7.')<br>
+            rem3 = int(input())<br>
+            rem5 = int(input())<br>
+            rem7 = int(input())<br>
+            age = (rem3 * 70 + rem5 * 21 + rem7 * 15) % 105<br>
+            print("Your age is {0}; that's a good time to start programming!".format(age))<br>
+           def count():<br>
+            print('Now I will prove to you that I can count to any number you want.')<br>
+            num = int(input())<br>
+            counter = 0<br>
+            while counter <= num:<br>
+            print("{0} !".format(counter))<br>
+            counter += 1<br>
+           def test():<br>
+            print("Let's test your programming knowledge.")<br>
+            print("Why do we use methods?")<br>
+            print("1. To repeat a statement multiple times.")<br>
+            print("2. To decompose a program into several small subroutines.")<br>
+            print("3. To determine the execution time of a program.")<br>
+            print("4. To interrupt the execution of a program.")<br>
+            answer = 2<br>
+            guess = int(input())<br>
+            while guess != answer:<br>
+            print("Please, try again.")<br>
+            guess = int(input())<br>
+            print('Completed, have a nice day!')<br>
+            print('.................................')<br>
+            print('.................................')<br>
+            print('.................................')<br>
+           def end():<br>
+            print('Congratulations, have a nice day!')<br>
+            print('.................................')<br>
+            print('.................................')<br>
+            print('.................................')<br>
+            input()<br>
+           
+           greet('Sbot', '2021') # change it as you need<br>
+           remind_name()<br>
+           guess_age()<br>
+           count()  </p>
+        </div>
+
+        <hr id="normal">
+
+        <div class="skills">
+          <img class="skillimage" src="images/skills.png" alt="skills-img">
+          <h2>BFS breadth first search</h2>
+          <p class="para">#+1<br>
+            from collections import defaultdict<br>
+            class Graph:<br>
+             # Constructor<br>
+             def __init__(self):<br>
+             # default dictionary to store graph<br>
+             self.graph = defaultdict(list)<br>
+             # function to add an edge to graph<br>
+             def addEdge(self,u,v):<br>
+             self.graph[u].append(v)<br>
+             # Function to print a BFS of graph<br>
+             def BFS(self, s):<br>
+             visited = [False] * (max(self.graph) + 1)<br>
+             queue = []<br>
+             queue.append(s)<br>
+             visited[s] = True<br>
+             while queue:<br>
+             # Dequeue a vertex from queue and print it<br>
+             s = queue.pop(0)<br>
+             print (s, end = " ")<br>
+             for i in self.graph[s]:<br>
+             if visited[i] == False:<br>
+             queue.append(i)<br>
+             visited[i] = True<br>
+            
+            # Create a graph tree<br>
+            g = Graph()<br>
+            g.addEdge(0, 1)<br>
+            g.addEdge(0, 2)<br>
+            g.addEdge(1, 2)<br>
+            g.addEdge(2, 0)<br>
+            g.addEdge(2, 3)<br>
+            g.addEdge(3, 3)<br>
+            print ("Following is Breadth First Traversal starting from vertex 0")<br>
+            g.BFS(2) </p>
+          <div class="skill-row">
+            <img class="logo1" src="images/java.png" alt="java-img">
+            <h3>Depth First Search</h3>
+            <p>from collections import defaultdict<br>
+              class Graph:<br>
+               # Constructor<br>
+               def __init__(self):<br>
+               # default dictionary to store graph<br>
+               self.graph = defaultdict(list)<br>
+               # function to add an edge to graph<br>
+               def addEdge(self, u, v):<br>
+               self.graph[u].append(v)<br>
+               def DFSUtil(self, v, visited):<br>
+               visited.add(v)<br>
+               print(v, end=' ')<br>
+               for neighbour in self.graph[v]:<br>
+               if neighbour not in visited:<br>
+               self.DFSUtil(neighbour, visited)<br>
+               # The function to do DFS traversal.<br>
+               def DFS(self, v):<br>
+               # Create a set to store visited vertices<br>
+               visited = set()<br>
+               # Call the recursive helper function to print DFS traversal<br>
+               self.DFSUtil(v, visited)<br>
+              #Create a graph<br>
+              g = Graph()<br>
+              g.addEdge(0, 1)<br>
+              g.addEdge(0, 2)<br>
+              g.addEdge(1, 2)<br>
+              g.addEdge(2, 0)<br>
+              g.addEdge(2, 3)<br>
+              g.addEdge(3, 3)<br>
+              print("Following is DFS starting from vertex 0")<br>
+              g.DFS(1)
+                </p>
+          </div>
+
+          <div class="skill-row">
+            <img class="logo2" src="images/python.png" alt="python-img">
+            <h3>AI Assignment 2</h3>
+            <p> from collections import deque<br>
+              class Graph:<br>
+               def __init__(self, adjac_lis): #Constructer to initialise the list<br>
+               self.adjac_lis = adjac_lis<br>
+               def get_neighbors(self, v): #Function to get the neighbors<br>
+               return self.adjac_lis[v]<br>
+               def h(self, n): #Heuristic function which is having equal values for all nodes<br>
+               H = {'A': 1,'B': 1,'C': 1,'D': 1}<br>
+               return H[n]<br>
+               def A_Star(self, start, stop):<br>
+               open_lst = set([start]) #List of nodes which have been visited, but who's n<br>
+               closed_lst = set([]) #List of nodes which have been visited and who's neig<br>
+               poo = {} #poo has present distances from start to all other nodes<br>
+               poo[start] = 0<br>
+               par = {} #par contains an adjac mapping of all nodes<br>
+               par[start] = start<br>
+               while len(open_lst) > 0: #While the open_lst is not empty<br>
+               n = None<br>
+               #Finding a node with the lowest value of f() -<br>
+               for v in open_lst:<br>
+               if n == None or poo[v] + self.h(v) < poo[n] + self.h(n):<br>
+               n = v;<br>
+               if n == None:<br>
+               print('Path does not exist!')<br>
+               return None<br>
+              
+               #If the current node is the stop then we start again from start<br>
+              
+               if n == stop:<br>
+               reconst_path = []<br>
+               while par[n] != n:<br>
+               reconst_path.append(n)<br>
+               n = par[n]<br>
+               reconst_path.append(start)<br>
+               reconst_path.reverse()<br>
+               print('Path found: {}'.format(reconst_path))<br>
+               return reconst_path<br>
+               for (m, weight) in self.get_neighbors(n): # Checking for neighbors in t<br>
+               if m not in open_lst and m not in closed_lst: #If the current node<br>
+               open_lst.add(m)<br>
+               par[m] = n<br>
+               poo[m] = poo[n] + weight<br>
+               else: #Else check if it's quicker to first visit n, then m and if i<br>
+               if poo[m] > poo[n] + weight:<br>
+               poo[m] = poo[n] + weight<br>
+               par[m] = n<br>
+               if m in closed_lst: #if the node was in the closed_lst, mov<br>
+               closed_lst.remove(m)<br>
+               open_lst.add(m)<br>
+
+               #Remove n from the open_lst, and add it to closed_lst because all of hi<br>
+               open_lst.remove(n)<br>
+               closed_lst.add(n)<br>
+               print('Path does not exist!')<br>
+               return None<br>
+              
+              #Input<br>
+              adjac_lis = {'A': [('B', 1), ('C', 3), ('D', 7)],'B': [('D', 5)],'C': [('D', 12)]}<br>
+              graph1 = Graph(adjac_lis)<br>
+              graph1.A_Star('A', 'D')<br></p>
+          </div>
+
+          <div class="skill-row">
+            <img class="logo3" src="images/html.png" alt="html-img">
+            <link class="logo" rel="stylesheet" href="https://cdn-icons-png.flaticon.com/512/921/921594.png">
+            <h3>experiment 3 </h3>
+            <p>from collections import defaultdict<br>
+              class Graph: #Class to represent a graph<br>
+               def __init__(self, vertices): #Constructor to initialise variables<br>
+               self.V = vertices<br>
+               self.graph = []<br>
+               def addEdge(self, u, v, w): #Function to add an edge to graph<br>
+               self.graph.append([u, v, w])<br>
+               def find(self, parent, i): #Function to find set of an element<br>
+               if parent[i] == i:<br>
+               return i<br>
+               return self.find(parent, parent[i])<br>
+              
+               def union(self, parent, rank, x, y): #Function for union of two sets<br>
+               xroot = self.find(parent, x)<br>
+               yroot = self.find(parent, y)<br>
+               # Attach smaller rank tree under root of high rank tree (Union by Rank)<br>
+               if rank[xroot] < rank[yroot]:<br>
+               parent[xroot] = yroot<br>
+               elif rank[xroot] > rank[yroot]:<br>
+               parent[yroot] = xroot<br>
+               else: # If ranks are same, then make one as root and increment its rank by<br>
+               parent[yroot] = xroot<br>
+               rank[xroot] += 1<br>
+               def KruskalMST(self): #Function to construct MST using Kruskal's algorithm<br>
+               MST = [] # MST Variable<br>
+               i = 0 #index variable, used for sorted edges<br>
+               e = 0 #index variable, used for result[]<br>
+               self.graph = sorted(self.graph,key=lambda item: item[2]) #Sorting all the e<br>
+               parent = []<br>
+               rank = []<br>
+               # Create V subsets with single elements<br>
+               for node in range(self.V):<br>
+               parent.append(node)<br>
+               rank.append(0)<br>
+               while e < self.V - 1:<br>
+               #Pick the smallest edge and increment the index for next iteration<br>
+               u, v, w = self.graph[i]<br>
+               i = i + 1<br>
+               x = self.find(parent, u)<br>
+               y = self.find(parent, v)<br>
+              
+               if x != y: #If including this edge doesn't cause cycle, include it in r<br>
+               e = e + 1<br>
+               MST.append([u, v, w])<br>
+               self.union(parent, rank, x, y)<br>
+               # Else discard the edge<br>
+               minimumCost = 0<br>
+               print ("Edges in the constructed MST")<br>
+               for u, v, weight in MST:<br>
+               minimumCost += weight<br>
+               print("%d -- %d == %d" % (u, v, weight))<br>
+               print("Minimum Spanning Tree" , minimumCost)<br>
+              #Input<br>
+              g = Graph(4)<br>
+              g.addEdge(0, 1, 10)<br>
+              g.addEdge(0, 2, 6)<br>
+              g.addEdge(0, 3, 5)<br>
+              g.addEdge(1, 3, 15)<br>
+              g.addEdge(2, 3, 4)<br>
+              g.KruskalMST()<br></p>
+          </div>
+
+          <div class="skill-row">
+            <img class="logo4" src="images/chips.png" alt="chips-img">
+            <h3>experiment 4</h3>
+            <p> N = 4<br>
+              def printSolution(board): #Function to print end solution<br>
+               for i in range(N):<br>
+               for j in range(N):<br>
+               print(board[i][j],end = '')<br>
+               print()<br>
+              def isSafe(board,row,col): #Function to check if its safe to place the queen in the<br>
+               for i in range(col):<br>
+               if board[row][i] == 1:<br>
+               return False<br>
+               for i,j in zip(range(row,-1,-1),range(col,-1,-1)):<br>
+               if board[i][j] == 2:<br>
+               return False<br>
+               for i,j in zip(range(row,N,1),range(col,-1,-1)):<br>
+               if board[i][j] == 1:<br>
+               return False<br>
+               return True<br>
+              def solveNQUtil(board,col): #Recursive Function to update the board<br>
+               if col >= N:<br>
+               return True<br>
+               for i in range(N):<br>
+               if isSafe(board,i,col):<br>
+               board[i][col] = 1<br>
+               if solveNQUtil(board,col+1) == True:<br>
+               return True<br>
+               board[i][col] = 0<br>
+               return False<br>
+              
+              def solveNQ():<br>
+               board = [[0,0,0,0],<br>
+               [0,0,0,0],<br>
+               [0,0,0,0],<br>
+               [0,0,0,0]]<br>
+               if solveNQUtil(board,1) == False:<br>
+               print ("Solution does not exist")<br>
+               return False<br>
+               printSolution(board)<br>
+               return True<br>
+              solveNQ()<br>
+              class Graph: #class for the map/graph<br>
+ def __init__(self,edges,n): #Constructor to initialize list<br>
+ self.adjList = [[] for _ in range (n)]<br>
+ for src,dest in edges:<br>
+ self.adjList[src].append(dest)<br>
+ self.adjList[dest].append(src)<br>
+ def colorGraph(graph,n):<br>
+ result = {}<br>
+ for u in range(n):<br>
+ assigned = set([result.get(i) for i in graph.adjList[u] if i in result]<br>
+ color = 1<br>
+ for c in assigned:<br>
+ if color != c:<br>
+ break<br>
+ color += 1<br>
+ result[u] = color<br>
+ for v in range(n):<br>
+ print(f"Color Assigned to vertex {v} is {colors[result[v]]}")<br>
+
+ if __name__ == "__main__":<br>
+ colors = ['','BLUE','GREEN','RED','YELLOW','ORANGE','PINK','BLACK','BROWN',<br>
+ edges = [(0,1),(0,4),(0,5),(4,5),(1,4),(1,3),(2,3),(2,4)]<br>
+ n = 8<br>
+ graph = Graph(edges,n)<br>
+ colorGraph(graph,n)<br>
+               </p>
+          </div>
+        </div>
+
+        <hr id="normal">
+
+        <div class="contact-me">
+          <h2>Get In Touch</h2>
+          <h3>If you also love eating and coding.</h3>
+          <p class="para">Love potato Chips as much as I do? Lets Talk about how awesome they are. We can code while we eat YOUR favourite flavour</p>
+          <a class="btn" href="mailto:ankitnetajikadam<br>gmail.com">CONTACT ME</a>
+        </div>
+    </div>
+      
+      
+      <div class="bottom-container">
+        <a class="footer-link" href="https://www.linkedin.com/in/ankit-kadam-bb831b215/">LinkedIn</a>
+        <a class="footer-link" href="https://www.instagram.com/ankit._kadam/">Instagram</a>
+        <a class="footer-link" href="https://github.com/ankitgothub">Github</a>
+        <p>© Ankit Kadam.</p>
+      </div>
+    
+</body>
+</html>
